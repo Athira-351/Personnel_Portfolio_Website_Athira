@@ -1,0 +1,154 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Navbar Brand */
+.navbar-brand h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s;
+}
+
+.navbar-brand h2:hover {
+  color: #3498db;
+}
+
+/* Desktop Menu */
+.menu-desktop {
+  display: none;
+  margin-left: auto; /* Align to the right */
+  padding: 10px;
+  color: #ecf0f1;
+}
+
+/* Mobile Menu */
+.menu-mobile {
+  display: flex;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+  font-size: 24px;
+  color: #658993;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.hamburger-button:hover {
+  background-color: #fafafa;
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Content */
+.mobile-menu-content {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  background-color: #020202;
+  padding: 20px;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Mobile Menu Category */
+.mobile-menu-category {
+  margin-bottom: 15px;
+}
+
+.mobile-menu-category h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #ecf0f1;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.mobile-menu-group {
+  margin-left: 10px;
+}
+
+.mobile-menu-item {
+  color: #ecf0f1;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.mobile-menu-item:hover {
+  color: #3498db;
+}
+
+/* Desktop View Styles */
+@media screen and (min-width: 768px) {
+  .menu-desktop {
+    display: flex;
+  }
+
+  .menu-desktop .p-megamenu {
+    background: #000000; /* Background color of the menu */
+    border: none; /* Remove border */
+  }
+
+  .menu-desktop .p-menuitem {
+    color: #ecf0f1; /* Text color */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px; /* Spacing around the menu items */
+  }
+
+  .menu-desktop .p-menuitem-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .menu-desktop .p-menuitem-link:hover {
+    color: #3498db; /* Link color on hover */
+    background-color: rgba(52, 152, 219, 0.1); /* Subtle background color on hover */
+    border-radius: 4px; /* Rounded corners on hover */
+  }
+
+  .menu-desktop .p-menuitem-icon {
+    color: #3498db; /* Icon color */
+    margin-right: 8px; /* Space between icon and text */
+  }
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 767px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
