@@ -1,11 +1,11 @@
 import React from 'react';
-import ExperienceList from '../components/ExperienceList';
+// import ExperienceList from '../components/ExperienceList';
 
 const Experience = () => {
     return (
         <div>
             <h1>My Experience</h1>
-            <ExperienceList />
+            {/* <ExperienceList /> */}
         </div>
     );
 };
